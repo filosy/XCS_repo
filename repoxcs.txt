@@ -20,7 +20,7 @@ description=File gara rieti CCR 2026
 update=2026-08-10
 
 name=Points_2026.cup
-
+Points_2026.cup
 type=waypont
 description=File ghetti  2026
 update=2026-08-10
