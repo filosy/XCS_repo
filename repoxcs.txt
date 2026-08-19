@@ -18,3 +18,9 @@ uri=https://www.soaringspot.com/en_gb/download-contest-file/5254-42030
 type=waypont
 description=File gara rieti CCR 2026
 update=2026-08-10
+
+name=Points_2026.cup
+
+type=waypont
+description=File ghetti  2026
+update=2026-08-10
