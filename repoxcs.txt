@@ -14,7 +14,7 @@ update=2025-09-20
 
 name=Rieti26_TP
 uri=https://www.soaringspot.com/en_gb/download-contest-file/5254-42030
-https://www.soaringspot.com/en_gb/download-contest-file/5254-42030
+#https://www.soaringspot.com/en_gb/download-contest-file/5254-42030
 type=waypont
 escription=File gara rieti CCR 2026
 update=2026-08-10
