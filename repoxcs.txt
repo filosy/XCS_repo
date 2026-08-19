@@ -11,3 +11,8 @@ uri=https://www.dropbox.com/scl/fi/j73q2ytmuvhxrlhkhgfb0/Points_2025.cup?rlkey=f
 type=waypoint
 description=File di Ghetti
 update=2025-09-20
+
+name=rieti2026
+uri=https://www.soaringspot.com/en_gb/download-contest-file/5254-42030
+type=waypont
+update=2026-08-16
