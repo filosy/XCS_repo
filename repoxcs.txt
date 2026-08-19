@@ -1,0 +1,22 @@
+name=GLB-FLARM-DeviceDatabase-UNITED.fln
+uri=https://turbo87.github.io/united-flarmnet/united.fln
+type=flarmnet
+description=FlarmNet, OGN and WeGlide live tracking data
+update=2025-03-02
+
+name=GLB-WPT-ProvingGrounds-XCSoar.cup
+uri=http://download.xcsoar.org/content/waypoint/region/GLB-WPT-ProvingGrounds-XCSoar.cup
+type=waypoint
+update=2025-03-02
+
+name=GLB-XCI-xcremote-XCNav.xci
+uri=http://download.xcsoar.org/content/xci/global/GLB-XCI-xcremote-XCNav.xci
+type=xci
+description=Input file for the XCNav Remote
+update=2025-03-02
+
+name=Points_2025oints.cup
+uri=https://www.dropbox.com/scl/fi/j73q2ytmuvhxrlhkhgfb0/Points_2025.cup?rlkey=f6mpxc1nsxug65z7kv6mjp5b7&st=07wup9ir&dl=0
+type=waypoint
+description=File di Ghetti
+update=2025-09-20
