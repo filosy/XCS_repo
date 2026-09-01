@@ -2,7 +2,7 @@
 name=ALPS_Test.xcm
 uri=https://download.xcsoar.org/beta/map/ALPS_Test.xcm
 type=map
-description=Prova mamma
+description=Prova mappa
 update=2026-09-01
 
 name=Points_2025oints.cup
