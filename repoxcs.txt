@@ -1,4 +1,3 @@
-https://download.xcsoar.org/beta/map/ALPS_Test.xcm
 
 name=ALPS_Test.xcm
 uri=https://download.xcsoar.org/beta/map/ALPS_Test.xcm
