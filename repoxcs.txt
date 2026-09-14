@@ -2,7 +2,7 @@ name=FE2026_Points_v2.cup
 uri=https://www.soaringspot.com/en_gb/download-contest-file/5297-40876
 type=waypoint
 description=piloni coppa ferrara 2026 vers. 2
-update=17/06/2026
+update=17-06-2026
 
 name=ALPS_Test.xcm
 uri=https://download.xcsoar.org/beta/map/ALPS_Test.xcm
