@@ -13,7 +13,7 @@ update=2026-09-01
 name=Points_2025oints.cup
 uri=https://www.dropbox.com/scl/fi/j73q2ytmuvhxrlhkhgfb0/Points_2025.cup?rlkey=f6mpxc1nsxug65z7kv6mjp5b7&st=07wup9ir&dl=0
 type=waypoint
-description=File di Ghetti
+description=File di Ghetti anno 2025
 update=2025-09-20
 
 name=Rieti26_TP.cup
