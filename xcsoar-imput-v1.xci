@@ -1,4 +1,5 @@
 #####Speed to Fly S2F _ VARIO MODE FORCE CLIMB
+## is active only if page is not Auto mode
 
 mode=default
 type=key
