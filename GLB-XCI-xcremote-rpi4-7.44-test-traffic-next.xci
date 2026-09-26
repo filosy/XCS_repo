@@ -1,0 +1,327 @@
+# Test file based on GLB-XCI-xcremote-rpi4-7.44.xci
+# Test purpose: verify whether F6 is received in the Traffic radar page.
+# Changes from the original file:
+# 1) The global F6 = Setup Alternates binding is disabled.
+# 2) F6 in Traffic mode is assigned to Traffic next.
+# 3) A StatusMessage is shown when the Traffic-mode F6 binding is triggered.
+#
+# If F6 still opens Alternates with this file, this XCI is not the file being
+# loaded, or the active mode is not one of the Traffic modes listed below.
+
+# Define gesture to open Quickmenu without keyboard or remote
+mode=default
+type=gesture
+data=ULDR
+event=QuickMenu
+
+#mode=default
+type=key
+data=0
+event=QuickMenu
+label=QuickMenu
+location=4
+
+## XCRemote Reset StatusMessage
+mode=default
+type=key
+data=e
+event=StatusMessage XCREMOTE WILL RESET IN 2 SECONDS
+
+mode=default
+type=key
+data=c
+event=StatusMessage XCREMOTE Connected
+
+### Edition21Buttons Sends PEV Start when X-Button is pressed long
+mode=default
+type=key
+data=Q
+event=PilotEvent
+event=StatusMessage PILOT EVENT ANNOUNCED
+event=PlaySound
+
+##### Quickmenu buttons Vario and Back
+mode=RemoteStick
+type=key
+data=0
+event=Mode Vario_menu
+event=StatusMessage Vario Menu
+label=Vario
+location=13
+
+mode=RemoteStick
+type=key
+data=0
+event=PilotEvent
+event=StatusMessage PILOT EVENT ANNOUNCED
+event=PlaySound
+event=Mode default
+label=Quit
+location=33
+
+mode=RemoteStick
+type=key
+data=0
+event=Mode default
+label=Zurück
+location=31
+
+###### Vario menu
+mode=Vario_menu
+type=key
+data=RIGHT
+event=SendNMEAPort2 g,v5
+event=SendNMEAPort1 g,v5
+event=StatusMessage VOLUME UP
+label=VOLUME UP (Right)
+location=8
+
+mode=Vario_menu
+type=key
+data=LEFT
+event=SendNMEAPort2 g,v-5
+event=SendNMEAPort1 g,v-5
+event=StatusMessage VOLUME DOWN
+label=VOLUME DWN (Left)
+location=9
+
+mode=Vario_menu
+type=key
+data=S
+event=SendNMEAPort2 g,s1
+event=SendNMEAPort1 g,s1
+event=StatusMessage S2F
+event=UserDisplayModeForce forcecruise
+label=S2F
+location=3
+
+mode=Vario_menu
+type=key
+data=V
+event=SendNMEAPort2 g,s0
+event=SendNMEAPort1 g,s0
+event=StatusMessage Vario
+event=UserDisplayModeForce forceclimb
+label=Vario
+location=2
+
+mode=Vario_menu
+type=key
+data=RETURN
+event=MacCready auto show
+event=MacCready auto toggle
+label=$(CheckAutoMc)MC\n$(MacCreadyToggleActionName)
+location=5
+
+mode=Vario_menu
+type=key
+data=DOWN
+event=MacCready show
+event=MacCready down
+label=MC- (DOWN)
+location=7
+
+mode=Vario_menu
+type=key
+data=UP
+event=MacCready show
+event=MacCready up
+label=MC+ (UP)
+location=6
+
+mode=Vario_menu
+type=key
+data=ESCAPE
+event=Mode default
+label=BACK (ESC)
+location=1
+
+mode=Vario_menu
+type=key
+data=M
+event=SendNMEAPort2 g,rm
+event=SendNMEAPort1 g,rm
+event=Mode variosetup
+event=StatusMessage XCVario Control
+label=XCVario Control
+location=4
+
+##### MODE VARIOSETUP
+mode=variosetup
+type=key
+data=RIGHT
+event=SendNMEAPort2 g,v5
+event=SendNMEAPort1 g,v5
+event=StatusMessage VOLUME UP
+label=VOLUME UP (Right)
+location=7
+
+mode=variosetup
+type=key
+data=LEFT
+event=SendNMEAPort2 g,v-5
+event=SendNMEAPort1 g,v-5
+event=StatusMessage VOLUME DOWN
+label=VOLUME DWN (Left)
+location=8
+
+mode=variosetup
+type=key
+data=0
+label=XCVario Control
+location=5
+
+mode=variosetup
+type=key
+data=UP
+event=SendNMEAPort2 g,ru
+event=SendNMEAPort1 g,ru
+label=Rotary\nLeft
+location=2
+
+mode=variosetup
+type=key
+data=DOWN
+event=SendNMEAPort2 g,rd
+event=SendNMEAPort1 g,rd
+label=Rotary\nRight
+location=3
+
+mode=variosetup
+type=key
+data=RETURN
+event=SendNMEAPort2 g,rp
+event=SendNMEAPort1 g,rp
+label=Rotary\nKlick
+location=4
+
+mode=variosetup
+type=key
+data=P
+event=SendNMEAPort2 g,rl
+event=SendNMEAPort1 g,rl
+label=Rotary\nHold
+location=9
+
+mode=variosetup
+type=key
+data=ESCAPE
+event=Mode Vario_menu
+event=StatusMessage Vario Menu
+event=SendNMEAPort2 g,rx
+event=SendNMEAPort1 g,rx
+label=BACK (ESC)
+location=1
+
+mode=variosetup
+type=key
+data=M
+event=Mode default
+event=SendNMEAPort2 g,rx
+event=SendNMEAPort1 g,rx
+
+##### PAN MODE
+mode=default
+type=key
+data=p
+event=Pan on
+event=ScreenModes full
+
+mode=pan
+type=key
+data=RETURN
+event=NearestMapItems
+
+mode=pan
+type=key
+data=F4
+event=Zoom in
+
+mode=pan
+type=key
+data=F6
+event=Zoom out
+
+##### Speed to Fly
+mode=default
+type=key
+data=S
+event=SendNMEAPort2 g,s1
+event=SendNMEAPort1 g,s1
+event=StatusMessage S2F
+event=UserDisplayModeForce forcecruise
+
+mode=default
+type=key
+data=V
+event=SendNMEAPort2 g,s0
+event=SendNMEAPort1 g,s0
+event=StatusMessage Vario
+event=UserDisplayModeForce forceclimb
+
+###### Default
+mode=default
+type=key
+data=T
+event=AbortTask toggle
+
+mode=default
+type=key
+data=8
+event=AdjustWaypoint previousarm
+event=StatusMessage Previous Waypoint
+
+mode=default
+type=key
+data=7
+event=AdjustWaypoint nextarm
+event=StatusMessage Next Waypoint
+
+mode=default
+type=key
+data=Z
+event=Zoom auto show
+event=Zoom auto toggle
+
+mode=default
+type=key
+data=M
+event=Mode Vario_menu
+
+# F4 = FLARM radar entry; disabled in the original file as well
+#mode=default
+type=key
+data=F4
+event=FlarmTraffic
+event=Mode default
+
+# IMPORTANT TEST: disable the global F6 binding, which otherwise opens Alternates
+#mode=default
+type=key
+data=F6
+#event=Setup Alternates
+
+##### Radar Page test for rpi4 / XCSoar 7.44
+# F6 is deliberately used for Traffic next in this test.
+mode=default.Traffic Display1.Traffic Display2.Traffic
+type=key
+data=F6
+event=StatusMessage DEBUG F6 in Traffic
+event=Traffic next
+
+# Optional direct tests for the other Traffic actions:
+# mode=default.Traffic Display1.Traffic Display2.Traffic
+# type=key
+# data=F5
+# event=Traffic previous
+
+# mode=default.Traffic
+# type=key
+# data=RETURN
+# event=Traffic details
+
+## changelog
+# Test file derived from GLB-XCI-xcremote-rpi4-7.44.xci
+# Test 1: global F6=Setup Alternates disabled
+# Test 2: Traffic-mode F6=Traffic next
+# Test 3: StatusMessage added to verify the active Traffic mode
