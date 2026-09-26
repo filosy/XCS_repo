@@ -326,6 +326,7 @@ mode=default.Traffic Display1.Traffic Display2.Traffic
 type=key
 data=F6
 event=Traffic next
+event=StatusMessage DEBUG:F6 in Traffic
 
 
 ##changelog##
