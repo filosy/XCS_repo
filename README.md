@@ -6,7 +6,7 @@ It includes:
 - custom input event files (`.xci`)
 - waypoint and task files (`.cup`)
 - map files (`.xcm`)
-- external resource links and download references
+- external resource links and download references for new repository from 7.45 of XCsoar
 
 ## Repository contents
 
